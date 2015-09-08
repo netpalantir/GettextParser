@@ -19,7 +19,8 @@ If you notice compliance oversights, please send a patch via pull request.
 
 ## Installation
 * Download sources and unpack to any folder.
-* If needed, create `config.php` file (see `config.php.dist`) and specify path to `xgettext` binary
+* If needed, copy `config.php.dist` to `config.php` and specify the path to the `xgettext` binary (recommended). The repository bundles a xgettext binary, but it may not work on your system.
+* Run `composer update` to fetch the required dependencies
 
 ## Supported formats
 
@@ -62,6 +63,8 @@ native:
 * An item in keywords list: `-k%k`
 * An item in input files list: `%f`
 * Source code charset: `--from-code=%c`
+
+Attention: do not add extra whitespace, as this will confuse PoEdit (eg: `-k %k` will not work).
 
 ## Known issues
 * plurals are not supported for Smarty (planned)
